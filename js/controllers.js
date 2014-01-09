@@ -1,8 +1,8 @@
 angular.module('myApp.controllers', [])
-  .controller('main', ['$scope', function($scope){
-    $scope.test = 'test';
+  .controller('mainCtrl', ['$scope', function($scope){
+    $scope.woo = 'test';
     console.log('woah');
   }])
-  .controller('mainCtrl', ['$scope', function($scope){
-    $scope.woo = 'Woo';
+  .controller('main', ['$scope', function($scope){
+    $scope.test = 'Woo';
   }]);
