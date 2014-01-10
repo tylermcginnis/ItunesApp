@@ -1,4 +1,9 @@
 angular.module('myApp.controllers', [])
   .controller('mainCtrl', ['$scope', function($scope){
-    $scope.test = 'test';
+    $scope.defaultInfo = {
+       search: '',
+       mediaType: 'all',
+       sortBy: 'artistName'
+    }
+
   }]);
