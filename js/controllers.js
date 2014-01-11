@@ -3,7 +3,7 @@ angular.module('myApp.controllers', [])
     
     $scope.defaultInfo = {
        search: '',
-       mediaType: 'movie',
+       mediaType: 'all',
        sortBy: 'artistName'
     }
 
@@ -33,14 +33,14 @@ angular.module('myApp.controllers', [])
       $scope.theData = [];
       for(var i = 0; i < searchInfo.length; i++){
         var correctData = {};
-        if(searchInfo[i].previewUrl) correctData['Play'] = searchInfo[i].previewUrl;
-        if(searchInfo[i].trackName) correctData['Song'] = searchInfo[i].trackName;
-        if(searchInfo[i].artistName) correctData['Artist'] = searchInfo[i].artistName;
-        if(searchInfo[i].collectionName) correctData['Collection'] = searchInfo[i].collectionName;
-        if(searchInfo[i].artworkUrl60) correctData['AlbumArt'] = searchInfo[i].artworkUrl60;
-        if(searchInfo[i].kind) correctData['Type'] = searchInfo[i].kind;
-        if(searchInfo[i].trackPrice) correctData['IndividualPrice'] = searchInfo[i].trackPrice;
-        if(searchInfo[i].collectionPrice) correctData['CollectionPrice'] = searchInfo[i].collectionPrice;
+        searchInfo[i].previewUrl && (correctData['Play'] = searchInfo[i].previewUrl);
+        searchInfo[i].trackName && (correctData['Song'] = searchInfo[i].trackName);
+        searchInfo[i].artistName && (correctData['Artist'] = searchInfo[i].artistName);
+        searchInfo[i].collectionName && (correctData['Collection'] = searchInfo[i].collectionName);
+        searchInfo[i].artworkUrl60 && (correctData['AlbumArt'] = searchInfo[i].artworkUrl60);
+        searchInfo[i].kind && (correctData['Type'] = searchInfo[i].kind);
+        searchInfo[i].trackPrice && (correctData['IndividualPrice'] = searchInfo[i].trackPrice);
+        searchInfo[i].collectionPrice && (correctData['CollectionPrice'] = searchInfo[i].collectionPrice);
         $scope.theData.push(correctData);
       }
     }
