@@ -1,0 +1,24 @@
+{
+  "name": "Angular Itunes App",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tylermcginnis33/ItunesApp",
+  "authors": [
+    "Tyler McGinnis <tylermcginnis33@gmail.com>"
+  ],
+  "description": "Itunes App built with Angular",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.2.7",
+    "angular": "~1.2.7",
+    "ng-grid": "~2.0.7",
+    "bootstrap": "~3.0.3",
+    "angular-resource": "~1.2.7"
+  }
+}
